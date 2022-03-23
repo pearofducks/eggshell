@@ -1,6 +1,5 @@
 _eggshell_plugins=(
   sanity
-  prompt
   editor
   completions
 )
