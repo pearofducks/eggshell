@@ -100,3 +100,10 @@ done
 # bindkey -v
 
 unset key{,map,bindings}
+
+# Set terminal title to current directory basename.
+function _eggshell_set_win_title() {
+  echo -ne "\033]0; $(basename "$PWD") \007"
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _eggshell_set_win_title
